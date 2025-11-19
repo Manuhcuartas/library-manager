@@ -1,19 +1,25 @@
 # 📚 Hexagonal Library API
 
+> 🔴 **LIVE DEMO:** [Access Swagger UI here](http://13.62.29.136:8080/swagger-ui/index.html)
+> *(Running on AWS EC2 t3.micro)*
+
 ![Java](https://img.shields.io/badge/Java-21-orange?style=flat-square)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3-green?style=flat-square)
 ![Architecture](https://img.shields.io/badge/Architecture-Hexagonal-blue?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)
 
-A robust REST API for a Library Management System, built to demonstrate **Hexagonal Architecture (Ports & Adapters)**, **Domain-Driven Design (DDD)** principles, and **Clean Code** practices using Java 21 and Spring Boot 3.
+A robust REST API for a Library Management System, built to demonstrate **Hexagonal Architecture (Ports & Adapters)**, *
+*Domain-Driven Design (DDD)** principles, and **Clean Code** practices using Java 21 and Spring Boot 3.
 
 ---
 
 ## 🚀 Project Goal
 
-The main goal of this project is not just to manage books, but to showcase how to **decouple business logic from the framework**.
+The main goal of this project is not just to manage books, but to showcase how to **decouple business logic from the
+framework**.
 
-In this architecture, the **Domain** is the core. It has no dependencies on Spring Boot, Databases, or external APIs. The "Outside World" (Infrastructure) adapts to the Domain through Ports.
+In this architecture, the **Domain** is the core. It has no dependencies on Spring Boot, Databases, or external APIs.
+The "Outside World" (Infrastructure) adapts to the Domain through Ports.
 
 ## 🛠️ Tech Stack
 
