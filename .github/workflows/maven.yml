@@ -1,0 +1,29 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Bajar el código del repositorio
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Instalar Java 21 (Temurin)
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache:maven: true # Esto hace que las siguientes veces sea más rápido
+
+      # 3. Ejecutar los tests (y compilar)
+      # Usamos 'verify' en lugar de 'test' porque ejecuta tests unitarios y de integración si los hubiera
+      - name: Build and Test with Maven
+        run: mvn -B verify --file pom.xml
